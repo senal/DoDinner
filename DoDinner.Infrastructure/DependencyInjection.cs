@@ -1,6 +1,8 @@
 using DoDinner.Application.Common.Interfaces.Authentication;
+using DoDinner.Application.Common.Interfaces.Persistence;
 using DoDinner.Application.Common.Interfaces.Services;
 using DoDinner.Infrastructure.Authentication;
+using DoDinner.Infrastructure.Persistence;
 using DoDinner.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +16,7 @@ public static class DependencyInjection
         services.Configure<JwtSettings>(configuration.GetSection(nameof(JwtSettings)));
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+        services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
 }
