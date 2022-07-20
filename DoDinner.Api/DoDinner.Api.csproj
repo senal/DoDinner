@@ -11,6 +11,7 @@
     <ProjectReference Include="..\DoDinner.Contracts\DoDinner.Contracts.csproj" />
     <ProjectReference Include="..\DoDinner.Application\DoDinner.Application.csproj" />
     <ProjectReference Include="..\DoDinner.Infrastructure\DoDinner.Infrastructure.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
 
 </Project>
