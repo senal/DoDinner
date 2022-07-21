@@ -11,7 +11,7 @@ public class ErrorHandlingFilterAttribute : ExceptionFilterAttribute
         var exception = context.Exception;
         var problemDetails = new ProblemDetails 
         {
-            Type = "https://tools.ietf.org/html/rfc7231#section-6.6.1"
+            Type = "https://tools.ietf.org/html/rfc7231#section-6.6.1",
             Title = "An error occured while processing your request",
             Status = (int)HttpStatusCode.InternalServerError,
         };
